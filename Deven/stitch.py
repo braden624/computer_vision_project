@@ -4,8 +4,8 @@ import cv2
 import imutils
 
 # Read images
-imageA = cv2.imread(r'C:\Users\Deven Mills\Documents\OU Spring 2024\ECE-5973-Computer_Vision\Project\Code\computer_vision_project\Deven\IMG_2355.jpg')
-imageB = cv2.imread(r'C:\Users\Deven Mills\Documents\OU Spring 2024\ECE-5973-Computer_Vision\Project\Code\computer_vision_project\Deven\IMG_2356.jpg')
+imageA = cv2.imread(r'C:\Users\Deven Mills\Documents\OU Spring 2024\ECE-5973-Computer_Vision\Project\Code\computer_vision_project\Deven\one.jpg')
+imageB = cv2.imread(r'C:\Users\Deven Mills\Documents\OU Spring 2024\ECE-5973-Computer_Vision\Project\Code\computer_vision_project\Deven\two.jpg')
 
 # Resize images
 imageA = imutils.resize(imageA, width=400)

@@ -1,7 +1,7 @@
 import cv2
 
 camera_1 = cv2.VideoCapture(0)
-camera_2 = cv2.VideoCapture(5)
+camera_2 = cv2.VideoCapture(6)
 
 while camera_1.isOpened():
     ret_1, frame_1 = camera_1.read()

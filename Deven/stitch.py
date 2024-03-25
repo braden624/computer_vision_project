@@ -13,17 +13,15 @@ imageB = imutils.resize(imageB, width=400)
 
 # Stitch the images together to create a panorama
 stitcher = Stitcher()
-result = stitcher.stitch([imageA, imageB], showMatches=True)
+result = stitcher.stitch([imageA, imageB])
 
 # Check if stitching was successful
-if result is not None:
-    (result, vis) = result
 
-    # Show the images
-    cv2.imshow("Image A", imageA)
-    cv2.imshow("Image B", imageB)
-    cv2.imshow("Keypoint Matches", vis)
-    cv2.imshow("Result", result)
-    cv2.waitKey(0)
-else:
-    print("Stitching failed. Unable to create panorama.")
+   
+
+    
+cv2.imshow("Image A", imageA)
+cv2.imshow("Image B", imageB)   
+cv2.imshow("Result", result)
+cv2.waitKey(0)
+

@@ -10,10 +10,9 @@ import cv2
 
 # initialize the video streams and allow them to warmup
 print("[INFO] starting cameras...")
-leftStream = VideoStream(src=6).start()
-rightStream = VideoStream(src=7).start()
+leftStream = VideoStream(src=1).start()
+rightStream = VideoStream(src=2).start()
 time.sleep(2.0)
-
 
 
 
@@ -26,6 +25,10 @@ while True:
     # grab the frames from their respective video streams
     left = leftStream.read()
     right = rightStream.read()
+
+    left = cv2.flip(left, 1)
+    right = cv2.flip(right, 1)
+
     # resize the frames
     left = imutils.resize(left, width=400)
     right = imutils.resize(right, width=400)

@@ -8,7 +8,7 @@ class Stitcher:
         self.isv3 = imutils.is_cv3(or_better=True)
         self.cachedH = None
     
-    def stitch(self, images, ratio=0.75, reprojThresh=4.0):
+    def stitch(self, images, ratio=0.5, reprojThresh=1.0):
 		# unpack the images
             (imageB, imageA) = images
             # if the cached homography matrix is None, then we need to
@@ -71,7 +71,7 @@ class Stitcher:
                 matches.append((m[0].trainIdx, m[0].queryIdx))
         
         # computing a homography requires at least 4 matches
-        if len(matches) > 5:
+        if len(matches) > 1:
             # construct the two sets of points
             ptsA = np.float32([kpsA[i] for (_, i) in matches])
             ptsB = np.float32([kpsB[i] for (i, _) in matches])

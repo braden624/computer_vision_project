@@ -11,9 +11,11 @@ cap1 = cv2.VideoCapture(1) # use 0 if you only have front facing camera
 ret, imageA = cap1.read() #read one frame
 
 
-cap2 = cv2.VideoCapture(0) # use 0 if you only have front facing camera
+cap2 = cv2.VideoCapture(2) # use 0 if you only have front facing camera
 ret, imageB = cap2.read() #read one frame
 
+imageA = cv2.flip(imageA, 1)
+imageB = cv2.flip(imageB, 1)
 
 # Resize images
 imageA = imutils.resize(imageA, width=400)

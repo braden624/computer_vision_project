@@ -10,6 +10,7 @@ import imutils
 cap1 = cv2.VideoCapture(1) # use 0 if you only have front facing camera
 ret, imageA = cap1.read() #read one frame
 
+
 cap2 = cv2.VideoCapture(0) # use 0 if you only have front facing camera
 ret, imageB = cap2.read() #read one frame
 
@@ -30,7 +31,5 @@ result = stitcher.stitch([imageA, imageB])
 cv2.imshow("Image A", imageA)
 cv2.imshow("Image B", imageB)   
 cv2.imshow("Result", result)
-cap1.release()
-cap2.release()
 cv2.waitKey(0)
 

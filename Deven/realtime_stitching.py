@@ -10,9 +10,11 @@ import cv2
 
 # initialize the video streams and allow them to warmup
 print("[INFO] starting cameras...")
-leftStream = VideoStream(src=1).start()
-rightStream = VideoStream(src=0).start()
+leftStream = VideoStream(src=6).start()
+rightStream = VideoStream(src=7).start()
 time.sleep(2.0)
+
+
 
 
 # initialize the image stitcher and total number of frames read
@@ -42,6 +44,7 @@ while True:
     cv2.putText(result, ts, (10, result.shape[0] - 10),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 0, 255), 1)
     # show the output images
+
     cv2.imshow("Result", result)
     cv2.imshow("Left Frame", left)
     cv2.imshow("Right Frame", right)

@@ -71,7 +71,7 @@ class Stitcher:
                 matches.append((m[0].trainIdx, m[0].queryIdx))
         
         # computing a homography requires at least 4 matches
-        if len(matches) > 4:
+        if len(matches) > 5:
             # construct the two sets of points
             ptsA = np.float32([kpsA[i] for (_, i) in matches])
             ptsB = np.float32([kpsB[i] for (i, _) in matches])

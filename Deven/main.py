@@ -1,7 +1,7 @@
 import cv2
-
-Left_camera = cv2.VideoCapture(1)
-Right_camera = cv2.VideoCapture(0)
+##used to check the camera index
+Left_camera = cv2.VideoCapture(cv2.CAP_DSHOW)
+Right_camera = cv2.VideoCapture(6)
 
 while Left_camera.isOpened():
     ret_1, frame_1 = Left_camera.read()

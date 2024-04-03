@@ -10,9 +10,10 @@ import cv2
 
 # initialize the video streams and allow them to warmup
 print("[INFO] starting cameras...")
-leftStream = VideoStream(src=0).start()
-rightStream = VideoStream(src=1).start()
+leftStream = VideoStream(src=1).start()
+rightStream = VideoStream(src=0).start()
 time.sleep(2.0)
+
 
 # initialize the image stitcher and total number of frames read
 stitcher = Stitcher()

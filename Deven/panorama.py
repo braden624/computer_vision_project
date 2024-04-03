@@ -41,7 +41,7 @@ class Stitcher:
         # check to see if we are using OpenCV 3.X
         if self.isv3:
             # detect and extract features from the image
-            descriptor = cv2.xfeatures2d.SIFT_create()
+            descriptor = cv2.SIFT_create()
             (kps, features) = descriptor.detectAndCompute(image, None)
         else:
             # detect keypoints in the image
